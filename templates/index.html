@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sreality Ads</title>
+</head>
+<body>
+    <h1>Scraped Ads</h1>
+    <div>
+        {% for ad in ads %}
+        <div>
+            <h2>{{ ad[1] }}</h2>
+            <img src="{{ ad[2] }}" alt="{{ ad[1] }}">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

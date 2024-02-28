@@ -1,0 +1,4 @@
+Flask
+Scrapy
+SQLAlchemy
+psycopg2-binary
