@@ -10,4 +10,4 @@ def index():
     ads = db.get_ads()
     return render_template('index.html', ads=ads)
 
-if __name__ == '__main__':    app.run(debug=True, host='0.0.0.0', port=8080)
+if __name__ == '__main__':    app.run(debug=False, host='0.0.0.0', port=8080)

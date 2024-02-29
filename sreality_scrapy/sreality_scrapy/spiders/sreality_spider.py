@@ -9,7 +9,7 @@ class SrealitySpider(scrapy.Spider):
     """
 
     name = "sreality"
-    start_urls = ['https://www.sreality.cz/api/cs/v2/estates?category_main_cb=1&category_type_cb=1&page=0&per_page=600']
+    start_urls = ['https://www.sreality.cz/api/cs/v2/estates?category_main_cb=1&category_type_cb=1&page=0&per_page=500']
 
     def parse(self, response, **kwargs):
         """
@@ -22,9 +22,7 @@ class SrealitySpider(scrapy.Spider):
             dict: A dictionary containing the extracted data.
         """
         response_json = json.loads(response.body)
-        for idx, flat in enumerate(response_json.get('_embedded').get('estates')):
-            if idx == 500:
-                continue
+        for flat in response_json.get('_embedded').get('estates'):
             imgs = flat.get('_links').get('images')
             yield (
                 {
