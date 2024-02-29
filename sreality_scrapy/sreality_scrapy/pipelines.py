@@ -6,7 +6,7 @@ import os
 sys.path.append("/app")
 sys.path.append("/workspace")
 print(os.getcwd())
-from models import DbHandler
+from db_handler import DbHandler
 
 class PostgresPipeline(object):
     def __init__(self):

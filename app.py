@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from models import DbHandler
+from db_handler import DbHandler
 
 
 app = Flask(__name__)
